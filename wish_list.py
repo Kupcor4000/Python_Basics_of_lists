@@ -7,4 +7,12 @@ books = [
 ]
 
 #the last element of every list, independent of their lenght
-print(books[len(books)-1])
+print("Last element in list: {}".format(books[len(books)-1]))
+books.insert(0,"Portret Doriana Graya by Oscar Wild")
+books.insert(2,"Człowiek w poszukiwaniu sensu by Frankl")
+recomendation = []
+recomendation.append(books[0])
+recomendation.append(books[1])
+del books[0]
+print("List after books changes: {}".format(books))
+print("List of recomended books: {}".format(recomendation))
