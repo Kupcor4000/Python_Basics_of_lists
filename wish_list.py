@@ -13,6 +13,6 @@ books.insert(2,"Człowiek w poszukiwaniu sensu by Frankl")
 recomendation = []
 recomendation.append(books[0])
 recomendation.append(books[1])
-del books[0]
+books.pop(0)
 print("List after books changes: {}".format(books))
 print("List of recomended books: {}".format(recomendation))
