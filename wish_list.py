@@ -1,9 +1,25 @@
+def display_list(display_name,wishes):
+    print(display_name +":")
+    for ob in wishes:
+        print(" * " + ob)
+    print("\n Suggested wish: ")
+    suggested_wish = wishes.pop(0)                  # Należy pamiętać, że usuwa to element z listy!
+    print("=======> " + suggested_wish + " <=========")
+        
+
+
 books = [
     "Automate the Boring Stuff with Python: Practical Programming for Total Beginners - Al Sweigart",
     "Python for Data Analysis",
     "Fluent Python: Clear, Concise, and Effective Programming - Luciano Ramalho",
     "Python for Kids: A Playful Introduction To Programming - Jason R. Briggs",
     "Hello Web App: Learn How to Build a Web App - Tracy Osborn",
+]
+
+video_games = [
+    "The Legend of Zelda: Breath of the Wild",
+    "Splatoon 2",
+    "Super Mario Odyssey",
 ]
 
 #the last element of every list, independent of their lenght
@@ -13,6 +29,6 @@ books.insert(2,"Człowiek w poszukiwaniu sensu by Frankl")
 recomendation = []
 recomendation.append(books[0])
 recomendation.append(books[1])
-books.pop(0)
-print("List after books changes: {}".format(books))
-print("List of recomended books: {}".format(recomendation))
+display_list("books",books)
+
+    
