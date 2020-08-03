@@ -1,5 +1,4 @@
 #Shooping list
-import time
 import os
 
 #funkcja polegajaca na dodawaniu obiektów
@@ -12,17 +11,18 @@ def show_list(list2):
     for i in range(len(list2)):
             print("{} : {}".format(i+1,list2[i]))
     
-
+#Stałe
 CONDITION = "DONE"
 ADD = "ADD"
 SHOW = "SHOW"
 HELP = "HELP"
 
+
 shopping_list = []
 help_sequence = "The sequence which explain to user how aplication works"
 user_input = "NOT DONE"
 
-while user_input != CONDITION:
+while True:
     #TODO User should now a total lenght of his list
     print("_________________________________________________________________________________")
     print("Actualy length of your shopping list is: {} positions!".format(len(shopping_list)))
@@ -41,17 +41,21 @@ while user_input != CONDITION:
     elif user_input == ADD:
         add_to_list(shopping_list)
         os.system("clear")
+        continue
         
     #TODO User should see a actual list at any time so that he can veryfy order
     elif user_input == SHOW:
         print("Actual shopping list: ")
         show_list(shopping_list)
-        
+        continue
             
     #TODO User should be able to state DONE when it finish, so that he can print a list
     elif user_input == CONDITION:
         print("Your final shopping list: ")
         show_list(shopping_list)
         print("Thanks for using our app!")
+        break;
+        
     else:
-        print("Przykro mi nie ma takiej komendy, proszę wybrać cos ponownie!")
+        print("I am sorry but it is impossible! Try again!")
+        continue
