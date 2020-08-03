@@ -3,7 +3,7 @@ def display_list(display_name,wishes):
     for ob in wishes:
         print(" * " + ob)
     print("\n Suggested wish: ")
-    suggested_wish = wishes.pop(0)                  # Należy pamiętać, że usuwa to element z listy!
+    suggested_wish = wishes[0]                 # Należy pamiętać -  .pop() usuwa to element z listy!
     print("=======> " + suggested_wish + " <=========")
         
 
@@ -29,6 +29,10 @@ books.insert(2,"Człowiek w poszukiwaniu sensu by Frankl")
 recomendation = []
 recomendation.append(books[0])
 recomendation.append(books[1])
+
+print("")
 display_list("books",books)
+print("")
+display_list("video games",video_games)
 
     
